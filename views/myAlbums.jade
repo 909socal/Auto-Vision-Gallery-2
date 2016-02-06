@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	h1 Albums
+	h5 Click (Album For More Details)
+	br
+	a(href='/addAlbum') Add Album
+	<br>
+	table.table
+		thead
+			tr
+			th.name-sort Album
+		tbody.items-list
+			tr
+				for album in albums
+					td.name-col= album.album
+
+block scripts
+	script(src='/js/myAlbums.js')
