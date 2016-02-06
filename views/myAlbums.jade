@@ -8,12 +8,11 @@ block content
 	<br>
 	table.table
 		thead
-			tr
 			th.name-sort Album
 		tbody.items-list
-			tr
-				for album in albums
-					td.name-col= album.album
+			for album in albums
+				tr
+					td.text-left= album.album
 
 block scripts
 	script(src='/js/myAlbums.js')
